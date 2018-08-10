@@ -6,7 +6,7 @@
 /*   By: thill <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/30 19:14:23 by thill             #+#    #+#             */
-/*   Updated: 2018/08/09 19:01:18 by thill            ###   ########.fr       */
+/*   Updated: 2018/08/09 20:20:47 by thill            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memdel(void **ap)
 {
-	if (*ap == NULL || ap == NULL)
+	if (ap == NULL)
 		return ;
 	free(*ap);
 	*ap = NULL;
