@@ -6,7 +6,7 @@
 /*   By: thill <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 23:33:56 by thill             #+#    #+#             */
-/*   Updated: 2018/07/14 02:43:20 by thill            ###   ########.fr       */
+/*   Updated: 2018/08/09 18:57:27 by thill            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
+	if (s == NULL || fd < 0)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
