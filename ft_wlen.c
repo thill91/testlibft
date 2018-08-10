@@ -6,7 +6,7 @@
 /*   By: thill <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 21:00:23 by thill             #+#    #+#             */
-/*   Updated: 2018/08/08 00:05:27 by thill            ###   ########.fr       */
+/*   Updated: 2018/08/09 18:34:52 by thill            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t		ft_wlen(const char *s, char c)
 {
-	unsigned int i;
-	unsigned int len;
+	unsigned int	i;
+	size_t			len;
 
 	i = 0;
 	len = 0;
-	while (s[i] == c)
+	while (s[i] == c && s[i])
 		i++;
 	while (s[i] != c && s != '\0')
 	{

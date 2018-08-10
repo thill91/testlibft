@@ -6,7 +6,7 @@
 /*   By: thill <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 20:26:31 by thill             #+#    #+#             */
-/*   Updated: 2018/08/09 16:58:58 by thill            ###   ########.fr       */
+/*   Updated: 2018/08/09 18:37:00 by thill            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 size_t		ft_wcount(const char *s, char c)
 {
-	unsigned int i;
-	unsigned int w;
+	unsigned int	i;
+	size_t			w;
 
 	i = 0;
 	w = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i])
 			w++;
 		while (s[i] != '\0' && (s[i] != c))
 			i++;
